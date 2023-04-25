@@ -5,6 +5,7 @@ const saveDocSchema = Joi.object({
         'any.required': 'image is required',
         'string.empty': 'image is required'
     }),
+
     number: Joi.string()
         .pattern(/^[0-9]{10}$/)
         .required()
@@ -23,7 +24,7 @@ const saveDocSchema = Joi.object({
 exports.validateDocument = input => {
     const { value, error } = saveDocSchema.validate(input);
     if (error) {
-        throw err;
+        throw error;
     }
     return value;
 };
