@@ -9,13 +9,6 @@ module.exports = (sequelize, DataTypes) => {
                     notEmpty: true
                 }
             },
-            recordDate: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                validate: {
-                    notEmpty: true
-                }
-            },
 
             number: {
                 type: DataTypes.STRING,
